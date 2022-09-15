@@ -1,5 +1,5 @@
 ## Setup Prettier Formart code 
-##### Tạo một folder tại Root .vscode/settings.json
+##### Tạo một folder tại Root /.vscode/settings.json
 
 ```json
     {
@@ -9,7 +9,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 ```
-##### Tạo một file tại Root .prettierrc 
+##### Tạo một file tại Root /.prettierrc 
 
 ```json
     {
