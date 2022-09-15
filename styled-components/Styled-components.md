@@ -38,3 +38,32 @@ const Box = styled.div`
   background: papayawhip;
 `;
 ```
+
+## More powerful example (Ví dụ mạnh mẽ hơn):
+
+##### Now we have javascript, we can do 🌟 more powerful things 🌟 (Chúng ta có Javascript chúng ta có thể làm điều mạnh mẽ hơn):
+
+```js
+// style-utils.js
+import { css } from "styled-components";
+
+export const media = {
+  handheld: (...args) => css`
+    @media (max-width: 420px) {
+      ${css(...args)};
+    }
+  `,
+};
+```
+
+```js
+import { media } from "../style-utils";
+
+// Make the text smaller on handheld devices
+const Box = styled.div`
+  font-size: 16px;
+  ${media.handheld`
+    font-size: 14px;
+  `};
+`;
+```
